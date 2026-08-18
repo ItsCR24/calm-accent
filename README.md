@@ -1,12 +1,12 @@
-# Latin Accent 🦊
+# Calm Accent ☁️
+  
+Calm Accent is a custom Firefox theme for Windows that leverages your system's accent color to create translucent UI surfaces for a sleek, modern aesthetic. It embodies the concept of an "accent" as both a personalized visual tone and a vibrant, expressive characteristic.
 
-Latin Accent is a custom Firefox theme for Windows that leverages your system's accent color to create translucent UI surfaces for a sleek, modern aesthetic. It embodies the concept of an "accent" as both a personalized visual tone and a vibrant, expressive characteristic.
+This is a fork of [Latin Accent](https://github.com/Acercandr0/Latin-Accent), modified to enhance the visual experience with a native Firefox look and feel, while maintaining the original's calm aesthetic.
 
-**Normal Tabs**
-![Preview 1](./Previews/prev1.png)
+## Preview
+![Preview 1](./Previews/prev0.png)
 
-**Vertical tabs**
-![Preview 2](./Previews/prev2.png)
 
 **CSS animations**
 | <img src="https://raw.githubusercontent.com/Acercandr0/Latin-Accent/main/Previews/prev8.gif" width="100%"/> | <img src="https://raw.githubusercontent.com/Acercandr0/Latin-Accent/main/Previews/prev9.gif" width="100%"/> |
@@ -45,7 +45,7 @@ toolkit.legacyUserProfileCustomizations.stylesheets
 This allows Firefox to load your custom `userChrome.css` and `userContent.css`.
 
 ### 🚩 Necessary flags
-In `about:config`, set the following preferences to **true**:
+In `about:config`, set the following preferences to **true** ✅:
 
 ```
 browser.tabs.allow_transparent_browser
@@ -53,20 +53,26 @@ widget.windows.mica
 gfx.webrender.all
 ```
 
+In `about:config`, set the following preferences to **false** ❌:
+
+```
+browser.newtabpage.activity-stream.nova.enabled
+```
+
 ### 🪟 Transparency - Option 1
 In `about:config`, set to **2**
 ```
 widget.windows.mica.toplevel-backdrop
 ```
-![Preview 1](./Previews/Firefox.png)
+![Preview 1](./Previews/prev0.png)
 ### 🪟 Transparency - Option 2
 Use [**Mica For Everyone**](https://github.com/MicaForEveryone/MicaForEveryone)
 
-![Preview 1](./Previews/MicaForEveryone.png)
+![Preview 2](./Previews/MicaForEveryone.png)
 ### 🪟 Transparency - Option 3
 Use [**Translucent Windows (Windhawk mod)**](https://windhawk.net/mods/translucent-windows)
 
-![Preview 1](./Previews/prev1.png)
+![Preview 3](./Previews/prev1.png)
 
 ### 🧪 Optional – Custom New Tab Page with Bonjour
 To match the full vibe, install the [**Bonjour**](https://addons.mozilla.org/en-US/firefox/addon/bonjour-startpage/) extension and apply the custom config.
@@ -84,5 +90,6 @@ To match the full vibe, install the [**Bonjour**](https://addons.mozilla.org/en-
 - Some effects depend on OS-level features (e.g. Mica on Windows 11)
 - Transparency effects may vary depending on your system theme and hardware acceleration settings.
 
-## 🧉 Made with cariño by [@Acercandr0](https://github.com/Acercandr0)
-Enjoy it. Fork it. Remix it. Make it yours.
+## 🐢 Fork by [@ItsCR24](https://github.com/ItsCR24)
+## 🧉 Original made by [@Acercandr0](https://github.com/Acercandr0)
+Enjoy.
