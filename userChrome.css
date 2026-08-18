@@ -53,6 +53,10 @@
   /* 🚫 Button Background Override */
   --toolbarbutton-hover-background: transparent !important;
   --toolbarbutton-active-background: transparent !important;
+  
+  /* Firefox 154 / Nova tab colors */
+  --tab-background-color-selected: transparent !important;
+  --tab-selected-outline-color: var(--accent-color) !important;
 }
 
 /* ===========================
@@ -128,12 +132,28 @@
   position: relative;
 }
 
+/* Tab background */
+.tabbrowser-tab > .tab-stack > .tab-background {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
 /* Active Tab */
-.tabbrowser-tab[selected="true"] .tab-background {
+.tabbrowser-tab[selected] > .tab-stack > .tab-background {
   border: var(--border-outline-width) solid var(--accent-color) !important;
   background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
   border-radius: var(--border-radius) !important;
-  animation: tabActivate 0.3s ease-out;
+  animation: tabActivate 0.3s ease-out !important;
 }
 
 /* Inactive Tabs */
