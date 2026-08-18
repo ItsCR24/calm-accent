@@ -1,6 +1,7 @@
 /* ===================================================================
    LATIN ACCENT - FIREFOX TRANSPARENT THEME
    Made with cariño by Acercandr0
+   Modified by CR24
    =================================================================== */
 
 :root {
@@ -342,15 +343,15 @@ tab-group:not([collapsed]) .tabbrowser-tab[selected="true"] .tab-background {
 }
 
 /* URL Input Styling */
-.urlbar-input-box {
+/* .urlbar-input-box {
   display: flex !important;
   justify-content: center !important;
-}
+} */
 
-.urlbar-input {
+/* .urlbar-input {
   text-align: center !important;
   transition: var(--transition-smooth) !important;
-}
+} */
 
 #urlbar[focused] .urlbar-input {
   transform: scale(1.02);
@@ -446,7 +447,7 @@ tab-group:not([collapsed]) .tabbrowser-tab[selected="true"] .tab-background {
    =========================== */
 
 /* 🔧 COMPREHENSIVE BUTTON SELECTOR - keeping normal behavior for urlbar buttons */
-toolbarbutton:not(.bookmark-item):not([id*="identity"]):not([id*="tracking"]):not([id*="star"]):not([id*="picture"]):not([id*="reader"]),
+/* toolbarbutton:not(.bookmark-item):not([id*="identity"]):not([id*="tracking"]):not([id*="star"]):not([id*="picture"]):not([id*="reader"]), */
 .toolbarbutton-1:not(.bookmark-item):not([id*="identity"]):not([id*="tracking"]):not([id*="star"]):not([id*="picture"]):not([id*="reader"]),
 #back-button,
 #forward-button,
@@ -683,25 +684,26 @@ toolbarbutton[label="Bookmarks toolbar items"] {
   display: none !important;
 }
 
+
 /* ===========================
-   🎮 WINDOW CONTROLS
-   =========================== */
+🎮 WINDOW CONTROLS
+=========================== */
 
 /* Normal Window */
 #main-window:not([tabsintitlebar]) .titlebar-buttonbox toolbarbutton,
 #main-window[tabsintitlebar]:not([sizemode="maximized"]) .titlebar-buttonbox toolbarbutton {
   opacity: var(--semi-opacity) !important;
-  transform: scale(0.9) !important;
-  transition: var(--transition-smooth) !important;
+  transform: none !important;
+  transition: opacity 0.3s ease, color 0.3s ease !important;
   fill: currentColor !important;
   color: inherit !important;
 }
 
-/* Hover - Normal Window - subtle scaling */
+/* Hover - Normal Window */
 #main-window:not([tabsintitlebar]) .titlebar-buttonbox toolbarbutton:hover,
 #main-window[tabsintitlebar]:not([sizemode="maximized"]) .titlebar-buttonbox toolbarbutton:hover {
   opacity: var(--hover-opacity) !important;
-  transform: scale(1.05) !important;
+  transform: none !important;
   color: var(--accent-color) !important;
 }
 
@@ -709,17 +711,18 @@ toolbarbutton[label="Bookmarks toolbar items"] {
 #main-window[tabsintitlebar][sizemode="maximized"] .titlebar-buttonbox toolbarbutton,
 .titlebar-buttonbox toolbarbutton {
   opacity: var(--hover-opacity) !important;
-  transform: scale(0.9) !important;
-  transition: var(--transition-smooth) !important;
+  transform: none !important;
+  transition: opacity 0.3s ease, color 0.3s ease !important;
   fill: currentColor !important;
   color: inherit !important;
 }
 
-/* Hover - Maximized Window - subtle scaling */
+/* Hover - Maximized Window */
 .titlebar-buttonbox toolbarbutton:hover {
-  transform: scale(1.05) !important;
+  transform: none !important;
   color: var(--accent-color) !important;
 }
+
 
 /* ===========================
    ✨ ANIMATIONS & KEYFRAMES
@@ -799,4 +802,52 @@ toolbarbutton[label="Bookmarks toolbar items"] {
 toolbarbutton:not(.bookmark-item):active,
 .toolbarbutton-1:not(.bookmark-item):active {
   animation: buttonPress 0.15s ease-out !important;
+}
+
+
+
+/* Transparency fix Patch */
+
+/* Browser chrome surfaces */
+#navigator-toolbox,
+#titlebar,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+#toolbar-menubar {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* If Firefox reuses toolbar colors from theme vars */
+#navigator-toolbox {
+  --toolbar-bgcolor: transparent !important;
+  --chrome-content-separator-color: transparent !important;
+  font-family: Geist !important; /* Custom Font */
+}
+
+/* Window background */
+#browserContainer,
+#appcontent,
+#tabbrowser-tabbox,
+#tabbrowser-tabpanels,
+#browser {
+  background-color: light-dark(rgba(255, 255, 255, 0.00), rgba(0, 0, 0, 0.00)) !important;
+  background-image: none !important;
+}
+
+/* URL bar background only */
+#urlbar-background,
+#urlbar:not([open]) .urlbar-background,
+#searchbar {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Themed selection color */
+::selection {
+  background-color: var(--accent-color-subtle) !important;
 }

@@ -3,6 +3,13 @@
    Made with cariño by Acercandr0
    =================================================================== */
 
+:root {
+  /* 🌈 Adaptive Color System */
+  --accent-color: color-mix(in srgb, AccentColor 100%, transparent) !important;
+  --accent-color-subtle: color-mix(in srgb, AccentColor 30%, transparent) !important;
+}
+
+
 @-moz-document url("about:home"), url("about:newtab"), url("about:blank") {
   html,
   body,
@@ -80,7 +87,48 @@
   .customize-menu label,
   .customize-menu input,
   .customize-menu button {
-    color: var(--newtab-text-primary-color) !important }
+    color: var(--newtab-text-primary-color) !important
+  }
+
+
+  /* Search bar */
+  .search-handoff-button {
+    border-radius: 8px !important;
+    transform: none !important;
+
+    background: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: none !important;
+    font-family: Geist !important; /* Custom Font */
+  }
+
+  .outer-wrapper.only-search {
+    display: flex !important;
+    padding-block-start: unset !important;
+  }
+
+  /* Hide Firefox Logo */
+  /* .logo-and-wordmark > .logo {
+    display:none !important;
+  } */
+  
+  /* Hide original wordmark */
+   .logo-and-wordmark .wordmark {
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block !important;
+  }
+
+  /* Replace wordmark */
+  .logo-and-wordmark .wordmark::before {
+    content: "Firefox" !important;
+    font-family: Inter !important;
+    font-size: 42px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    line-height: 1 !important;
+  }
+
 }
 
   /* ===========================
@@ -94,7 +142,14 @@
   display: none !important;
 }
 
-  /* Search bar */
-  .search-wrapper .search-inner-wrapper {
-  display: none !important;
+/* PDF Viewer */
+@-moz-document unobservable-document() {
+  :root {
+    --body-bg-color: transparent !important;
+    --toolbar-bg-color: transparent !important;
+    --toolbar-border-color: transparent !important;
+    --field-bg-color: transparent !important;
+    --field-border-color: transparent !important;
+    --dropdown-btn-bg-color: transparent !important;
   }
+}
