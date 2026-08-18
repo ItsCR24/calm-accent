@@ -1,6 +1,6 @@
 # Calm Accent ☁️
   
-Calm Accent is a custom Firefox theme for Windows that leverages your system's accent color to create translucent UI surfaces for a sleek, modern aesthetic. It embodies the concept of an "accent" as both a personalized visual tone and a vibrant, expressive characteristic.
+Calm Accent is a custom Firefox theme for Windows that leverages your system's accent color to create translucent UI surfaces for a sleek, modern aesthetic.
 
 This is a fork of [Latin Accent](https://github.com/Acercandr0/Latin-Accent), modified to enhance the visual experience with a native Firefox look and feel, while maintaining the original's calm aesthetic.
 
