@@ -32,7 +32,7 @@
   --border-outline-width: 1px;
   
   /* 🎨 Adaptive Interface Colors - Light/Dark aware */
-  --base-bg: light-dark(rgb(245, 245, 245), rgb(20, 20, 20));
+  --base-bg: light-dark(rgb(245, 245, 245, 0.95), rgb(20, 20, 20, 0.95)) !important;
   --panel-bg: color-mix(in srgb, var(--accent-color) 1%, var(--base-bg) 99%) !important;
   --panel-border: var(--accent-color) !important;
   --panel-text: light-dark(rgb(40, 40, 40), white) !important;
