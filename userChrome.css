@@ -408,7 +408,6 @@ tab-group:not([collapsed]) .tabbrowser-tab[selected="true"] .tab-background {
   margin: 0 1px !important;
   min-height: 24px !important;
   max-height: 24px !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   white-space: nowrap !important;
