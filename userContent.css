@@ -5,152 +5,154 @@
    =================================================================== */
 
 :root {
-  /* 🌈 Adaptive Color System */
-  --accent-color: color-mix(in srgb, AccentColor 100%, transparent) !important;
-  --accent-color-subtle: color-mix(in srgb, AccentColor 30%, transparent) !important;
+	/* 🌈 Adaptive Color System */
+	--accent-color: color-mix(in srgb, AccentColor 100%, transparent) !important;
+	--accent-color-subtle: color-mix(in srgb, AccentColor 30%, transparent) !important;
 }
 
 
 @-moz-document url("about:home"), url("about:newtab"), url("about:blank") {
-  html,
-  body,
-  #root,
-  .outer-wrapper,
-  main,
-  .discovery-stream,
-  .ds-layout,
-  .sections-list,
-  .top-sites,
-  .search-wrapper {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-    border: none !important;
-  }
 
-  /* ===========================
-     🎯 TOP SITES
-     =========================== */
-  
-  /* Remove ALL backgrounds from top sites */
-  .top-sites .top-site-outer,
-  .top-sites .top-site-inner,
-  .top-site-outer .tile,
-  .tile,
-  .shortcuts-refresh .top-sites-list .top-site-outer .tile,
-  .shortcuts-refresh .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
+	html,
+	body,
+	#root,
+	.outer-wrapper,
+	main,
+	.discovery-stream,
+	.ds-layout,
+	.sections-list,
+	.top-sites,
+	.search-wrapper {
+		background: transparent !important;
+		background-color: transparent !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		filter: none !important;
+		border: none !important;
+	}
 
-  /* Only opacity changes on hover */
-  .top-sites .top-site-outer {
-    opacity: 0.3 !important;
-    transition: opacity 0.3s ease !important;
-  }
+	/* 	===========================
+     		  🎯 TOP SITES
+     	=========================== */
 
-  .top-sites .top-site-outer:hover {
-    opacity: 1 !important;
-  }
+	/* Remove ALL backgrounds from top sites */
+	.top-sites .top-site-outer,
+	.top-sites .top-site-inner,
+	.top-site-outer .tile,
+	.tile,
+	.shortcuts-refresh .top-sites-list .top-site-outer .tile,
+	.shortcuts-refresh .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
+		background: transparent !important;
+		background-color: transparent !important;
+		background-image: none !important;
+		box-shadow: none !important;
+		border: none !important;
+	}
 
-  /* Force transparent background for topsites section */
-  .top-sites {
-    --newtab-background-color-secondary: transparent !important;
-  }
+	/* Only opacity changes on hover */
+	.top-sites .top-site-outer {
+		opacity: 0.3 !important;
+		transition: opacity 0.3s ease !important;
+	}
 
-  /* ===========================
-     🛠️  CUSTOMIZE MENU FIX
-     =========================== */
-  
-  /* Restore proper background for customize menu */
-  .customize-menu,
-  .customize-menu.customize-animate-enter-done {
-    background: var(--newtab-background-color) !important;
-    background-color: var(--newtab-background-color) !important;
-  }
+	.top-sites .top-site-outer:hover {
+		opacity: 1 !important;
+	}
 
-  /* Ensure customize menu has proper styling */
-  .customize-menu {
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0px !important;
-  }
+	/* Force transparent background for topsites section */
+	.top-sites {
+		--newtab-background-color-secondary: transparent !important;
+	}
 
-  /* Fix text visibility in customize menu */
-  .customize-menu .section-title,
-  .customize-menu .section-disclaimer,
-  .customize-menu .personalize-button,
-  .customize-menu label,
-  .customize-menu input,
-  .customize-menu button {
-    color: var(--newtab-text-primary-color) !important
-  }
+	/*	===========================
+     	  🛠️  CUSTOMIZE MENU FIX
+    	=========================== */
+
+	/* Restore proper background for customize menu */
+	.customize-menu,
+	.customize-menu.customize-animate-enter-done {
+		background: var(--newtab-background-color) !important;
+		background-color: var(--newtab-background-color) !important;
+	}
+
+	/* Ensure customize menu has proper styling */
+	.customize-menu {
+		box-shadow: none !important;
+		border: none !important;
+		border-radius: 0px !important;
+	}
+
+	/* Fix text visibility in customize menu */
+	.customize-menu .section-title,
+	.customize-menu .section-disclaimer,
+	.customize-menu .personalize-button,
+	.customize-menu label,
+	.customize-menu input,
+	.customize-menu button {
+		color: var(--newtab-text-primary-color) !important
+	}
 
 
-  /* Search bar */
-  .search-handoff-button {
-    border-radius: 8px !important;
-    transform: none !important;
+	/* Search bar */
+	.search-handoff-button {
+		border-radius: 8px !important;
+		transform: none !important;
 
-    background: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: none !important;
-    font-family: Geist !important; /* Custom Font */
-  }
+		background: rgba(255, 255, 255, 0.08) !important;
+		box-shadow: none !important;
+		font-family: Geist !important;
+		/* Custom Font */
+	}
 
-  .outer-wrapper.only-search {
-    display: flex !important;
-    padding-block-start: unset !important;
-  }
+	.outer-wrapper.only-search {
+		display: flex !important;
+		padding-block-start: unset !important;
+	}
 
-  /* Hide Firefox Logo */
-  /* .logo-and-wordmark > .logo {
+	/* Hide Firefox Logo */
+	/* .logo-and-wordmark > .logo {
     display:none !important;
   } */
-  
-  /* Hide original wordmark */
-   .logo-and-wordmark .wordmark {
-    background: none !important;
-    width: auto !important;
-    height: auto !important;
-    display: inline-block !important;
-  }
 
-  /* Replace wordmark */
-  .logo-and-wordmark .wordmark::before {
-    content: "Firefox" !important;
-    font-family: Inter !important;
-    font-size: 42px !important;
-    font-weight: 600 !important;
-    letter-spacing: 1px;
-    line-height: 1 !important;
-  }
+	/* Hide original wordmark */
+	.logo-and-wordmark .wordmark {
+		background: none !important;
+		width: auto !important;
+		height: auto !important;
+		display: inline-block !important;
+	}
+
+	/* Replace wordmark */
+	.logo-and-wordmark .wordmark::before {
+		content: "Firefox" !important;
+		font-family: Inter !important;
+		font-size: 42px !important;
+		font-weight: 600 !important;
+		letter-spacing: 1px;
+		line-height: 1 !important;
+	}
 
 }
 
-  /* ===========================
-     🎭  HIDE ELEMENTS
-     =========================== */
+/* 	===========================
+    	🎭  HIDE ELEMENTS
+	=========================== */
 
-  /* Recent Activity */
+/* Recent Activity */
 .body-wrapper.on .section-title,
 .body-wrapper.on .sections-list .section:last-of-type,
 .body-wrapper.on .topics {
-  display: none !important;
+	display: none !important;
 }
 
 /* PDF Viewer */
 @-moz-document unobservable-document() {
-  :root {
-    --body-bg-color: transparent !important;
-    --toolbar-bg-color: transparent !important;
-    --toolbar-border-color: transparent !important;
-    --field-bg-color: transparent !important;
-    --field-border-color: transparent !important;
-    --dropdown-btn-bg-color: transparent !important;
-  }
+	:root {
+		--body-bg-color: transparent !important;
+		--toolbar-bg-color: transparent !important;
+		--toolbar-border-color: transparent !important;
+		--field-bg-color: transparent !important;
+		--field-border-color: transparent !important;
+		--dropdown-btn-bg-color: transparent !important;
+	}
 }

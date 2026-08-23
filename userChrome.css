@@ -352,9 +352,11 @@ tab-group:not([collapsed]) .tabbrowser-tab[selected="true"] .tab-background {
   margin-right: 8px !important;
 }
 
-#urlbar-results .urlbarView-row:hover {
+#urlbar-results .urlbarView-row:hover,
+#urlbar-results .urlbarView-row[selected],
+#urlbar-results .urlbarView-row[aria-selected="true"] {
   background: var(--hover-bg) !important;
-  transform: translateX(4px);
+  transform: translateX(4px) !important;
   margin-right: 8px !important;
 }
 
