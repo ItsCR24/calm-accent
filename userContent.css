@@ -96,11 +96,13 @@
 	.search-handoff-button {
 		border-radius: 8px !important;
 		transform: none !important;
-
 		background: rgba(255, 255, 255, 0.08) !important;
 		box-shadow: none !important;
-		font-family: Geist !important;
-		/* Custom Font */
+		font-family: Geist, Arial, sans-serif !important; /* Custom Font */
+	}
+
+	.search-wrapper content-search-handoff-ui {
+		--content-search-handoff-ui-fakefocus-border-color: var(--accent-color) !important;
 	}
 
 	.outer-wrapper.only-search {

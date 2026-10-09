@@ -89,6 +89,7 @@ For a more immersive experience, you can also install the [**Transparent Zen**](
 - Restart Firefox after installing or editing any styles.
 - Some effects depend on OS-level features (e.g. Mica on Windows 11)
 - Transparency effects may vary depending on your system theme and hardware acceleration settings.
+- As of now, only works as expected with dark mode enabled in Firefox.
 
 ## 🐢 Fork by [@ItsCR24](https://github.com/ItsCR24)
 ## 🧉 Original made by [@Acercandr0](https://github.com/Acercandr0)

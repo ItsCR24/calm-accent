@@ -937,7 +937,7 @@ toolbarbutton:not(.bookmark-item):active,
     --button-text-color-muted: white !important;
 }
 
-/*Darker background for panels and tab previews */
+/* Darker background for panels and tab previews */
 panelmultiview {
   background-color: #222 !important;
 }
