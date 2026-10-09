@@ -900,3 +900,52 @@ toolbarbutton:not(.bookmark-item):active,
   margin-inline: 1px !important;
   margin-block-start: -1px !important;
 }
+
+/* Readable text for all moz-button elements */
+*|moz-button {
+    /* Standard Buttons */
+    --button-text-color: white !important;
+    --button-text-color-hover: white !important;
+    --button-text-color-active: white !important;
+    --button-text-color-selected: white !important;
+    --button-text-color-disabled: white !important;
+
+    /* Primary Buttons */
+    --button-text-color-primary: white !important;
+    --button-text-color-primary-hover: white !important;
+    --button-text-color-primary-active: white !important;
+    --button-text-color-primary-selected: white !important;
+    --button-text-color-primary-disabled: white !important;
+
+    /* Destructive Buttons */
+    --button-text-color-destructive: white !important;
+    --button-text-color-destructive-hover: white !important;
+    --button-text-color-destructive-active: white !important;
+    --button-text-color-destructive-selected: white !important;
+    --button-text-color-destructive-disabled: white !important;
+
+    /* Ghost Buttons */
+    --button-text-color-ghost: white !important;
+    --button-text-color-ghost-hover: white !important;
+    --button-text-color-ghost-active: white !important;
+    --button-text-color-ghost-selected: white !important;
+    --button-text-color-ghost-disabled: white !important;
+
+    /* Additional Button Types */
+    --button-text-color-toolbar: white !important;
+    --button-text-color-menu: white !important;
+    --button-text-color-muted: white !important;
+}
+
+/*Darker background for panels and tab previews */
+panelmultiview {
+  background-color: #222 !important;
+}
+.panel-subview-body {
+  background-color: #222 !important;
+}
+
+.tab-preview-content-interactive:not(:empty),
+.tab-preview-content-main {
+  background: #222 !important;
+}
