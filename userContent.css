@@ -12,7 +12,6 @@
 
 
 @-moz-document url("about:home"), url("about:newtab"), url("about:blank") {
-
 	html,
 	body,
 	#root,
@@ -146,13 +145,15 @@
 }
 
 /* PDF Viewer */
-@-moz-document unobservable-document() {
-	:root {
-		--body-bg-color: transparent !important;
-		--toolbar-bg-color: transparent !important;
-		--toolbar-border-color: transparent !important;
-		--field-bg-color: transparent !important;
-		--field-border-color: transparent !important;
-		--dropdown-btn-bg-color: transparent !important;
-	}
+body:has(.pdfViewer),
+body:has(.pdfViewer) #toolbarContainer,
+body:has(.pdfViewer) #toolbarSidebar,
+body:has(.pdfViewer) .toolbarField,
+body:has(.pdfViewer) .dropdownToolbarButton,
+body:has(.pdfViewer) #scaleSelect {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }

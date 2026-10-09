@@ -365,6 +365,7 @@ tab-group:not([collapsed]) .tabbrowser-tab[selected="true"] .tab-background {
 }
 
 /* URL Input Styling */
+/* Center the text in the URL bar */
 /* .urlbar-input-box {
   display: flex !important;
   justify-content: center !important;
@@ -750,7 +751,8 @@ toolbarbutton[label="Bookmarks toolbar items"] {
    =========================== */
 
 /* URL Bar Expand Animation */
-@keyframes urlbarExpand {
+/* Disabled by default for a snappy feel */
+/* @keyframes urlbarExpand {
   0% {
     opacity: 0;
     transform: scale(0.95) translateY(-5px);
@@ -762,7 +764,7 @@ toolbarbutton[label="Bookmarks toolbar items"] {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
-}
+} */
 
 /* Tab Activation Animation */
 @keyframes tabActivate {
@@ -826,7 +828,6 @@ toolbarbutton:not(.bookmark-item):active,
 }
 
 
-
 /* Transparency fix Patch */
 
 /* Browser chrome surfaces */
@@ -846,7 +847,7 @@ toolbarbutton:not(.bookmark-item):active,
 #navigator-toolbox {
   --toolbar-bgcolor: transparent !important;
   --chrome-content-separator-color: transparent !important;
-  font-family: Geist !important; /* Custom Font */
+  font-family: Geist, Arial, sans-serif !important; /* Custom Font */
 }
 
 /* Window background */
@@ -871,4 +872,31 @@ toolbarbutton:not(.bookmark-item):active,
 /* Themed selection color */
 ::selection {
   background-color: var(--accent-color-subtle) !important;
+}
+
+/* Firefox Nova fixes */
+#urlbar .urlbarView-background {
+  background: var(--panel-bg) !important;
+  background-color: var(--panel-bg) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+
+  border-inline-start:
+    var(--border-outline-width) solid var(--accent-color) !important;
+
+  border-inline-end:
+    var(--border-outline-width) solid var(--accent-color) !important;
+
+  border-block-end:
+    var(--border-outline-width) solid var(--accent-color) !important;
+    
+  border-end-start-radius:
+    var(--border-radius-large) !important;
+
+  border-end-end-radius:
+    var(--border-radius-large) !important;
+
+  /* Fix the urlbar width of the search results */
+  margin-inline: 1px !important;
+  margin-block-start: -1px !important;
 }

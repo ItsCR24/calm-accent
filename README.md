@@ -2,7 +2,7 @@
   
 Calm Accent is a custom Firefox theme for Windows that leverages your system's accent color to create translucent UI surfaces for a sleek, modern aesthetic.
 
-This is a fork of [Latin Accent](https://github.com/Acercandr0/Latin-Accent), modified to enhance the visual experience with a native Firefox look and feel, while maintaining the original's calm aesthetic.
+This is a fork of [Latin Accent](https://github.com/Acercandr0/Latin-Accent), modified to enhance the visual experience with a native Firefox look and feel, while maintaining the original's calm aesthetic and updating it for modern Firefox versions.
 
 ## Preview
 ![Preview 1](./Previews/prev0.png)
@@ -15,15 +15,15 @@ This is a fork of [Latin Accent](https://github.com/Acercandr0/Latin-Accent), mo
 **Works with your accent**
 <table style="width:100%;">
   <tr>
+    <td style="width:20%; text-align:center;"><img src="./Previews/prev1.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
+    <td style="width:20%; text-align:center;"><img src="./Previews/prev2.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
     <td style="width:20%; text-align:center;"><img src="./Previews/prev3.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
     <td style="width:20%; text-align:center;"><img src="./Previews/prev4.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
     <td style="width:20%; text-align:center;"><img src="./Previews/prev5.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
-    <td style="width:20%; text-align:center;"><img src="./Previews/prev6.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
-    <td style="width:20%; text-align:center;"><img src="./Previews/prev7.png" style="width:100%; height:auto; display:block; margin:auto;"></td>
   </tr>
 </table>
 
-### 🛠 Installation
+## 🛠 Installation
 
 1.  Open **`about:profiles`** in Firefox.
 2.  Find the **Root Directory** of your active profile and open it.
@@ -49,6 +49,7 @@ In `about:config`, set the following preferences to **true** ✅:
 
 ```
 browser.tabs.allow_transparent_browser
+widget.transparent-windows
 widget.windows.mica
 gfx.webrender.all
 ```
@@ -56,6 +57,7 @@ gfx.webrender.all
 In `about:config`, set the following preferences to **false** ❌:
 
 ```
+browser.nova.enabled
 browser.newtabpage.activity-stream.nova.enabled
 ```
 
@@ -68,22 +70,20 @@ widget.windows.mica.toplevel-backdrop
 ### 🪟 Transparency - Option 2
 Use [**Mica For Everyone**](https://github.com/MicaForEveryone/MicaForEveryone)
 
-![Preview 2](./Previews/MicaForEveryone.png)
 ### 🪟 Transparency - Option 3
 Use [**Translucent Windows (Windhawk mod)**](https://windhawk.net/mods/translucent-windows)
 
-![Preview 3](./Previews/prev1.png)
-
-### 🧪 Optional – Custom New Tab Page with Bonjour
-To match the full vibe, install the [**Bonjour**](https://addons.mozilla.org/en-US/firefox/addon/bonjour-startpage/) extension and apply the custom config.
+## 🧪 Optional - Custom Font and Transparent Zen
+To match the full vibe, install the [**Geist**](https://fonts.google.com/specimen/Geist) font and set it as your default font in Firefox settings.
+For a more immersive experience, you can also install the [**Transparent Zen**](https://addons.mozilla.org/de/firefox/addon/transparent-zen) extension to make all (supported) pages transparent.
 
 ### Steps:
-1. Install the **Bonjour** extension from Mozilla Add-ons.
-2. Select "Local files" under 'Background type'.
-3. Open Bonjour's settings → click **"Show all settings"**.
-4. Copy the content of `bonjour.css`.
-5. Paste it on Custom Style section.
-6. Your new tab page will now match the Latin Accent aesthetic.
+1. Install the [**Geist**](https://fonts.google.com/specimen/Geist) font from Google Fonts on your system.
+2. Open Firefox settings and go to the **Accessibility** section.
+3. Under **Fonts**, select **Geist** as your default font.
+4. Install the [**Transparent Zen**](https://addons.mozilla.org/de/firefox/addon/transparent-zen) extension.
+5. Restart Firefox.
+6. Your new tab page will now match the Calm Accent theme's aesthetic.
 
 ### 💬 Notes
 - Restart Firefox after installing or editing any styles.
@@ -92,4 +92,4 @@ To match the full vibe, install the [**Bonjour**](https://addons.mozilla.org/en-
 
 ## 🐢 Fork by [@ItsCR24](https://github.com/ItsCR24)
 ## 🧉 Original made by [@Acercandr0](https://github.com/Acercandr0)
-Enjoy.
+Enjoy!
