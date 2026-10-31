@@ -102,7 +102,7 @@
 	}
 
 	.search-wrapper content-search-handoff-ui {
-		--content-search-handoff-ui-fakefocus-border-color: var(--accent-color) !important;
+		--content-search-handoff-ui-fakefocus-border-color: var(--accent-color-subtle) !important;
 	}
 
 	.outer-wrapper.only-search {
